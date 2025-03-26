@@ -195,3 +195,24 @@ body {
 .delete-list-item:active {
   background-color: hsl(60, 23%, 87%);
 }
+
+@media screen and (max-width: 1200px) {
+  .main-section {
+    margin-left: -400px;
+  }
+
+  .list-item {
+    width: 250px;
+  }
+
+  .get-recipe-container {
+    width: 300px;
+  }
+
+  .ready-for-recipe,
+  .generate-recipe {
+    font-size: 13px;
+  }
+
+
+}
