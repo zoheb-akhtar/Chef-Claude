@@ -1,4 +1,4 @@
-Check out Chef Claude [here!]([https://zoheba-portfolio.vercel.app/](https://chef-claude-zoheb-akhtars-projects.vercel.app/))
+Check out Chef Claude [here!][https://chef-claude-zoheb-akhtars-projects.vercel.app/]
 
 # Chef Claude
 An AI-driven recipe suggestion web app built with React.js that allows users to input ingredients they have and receive tailored recipe recommendations powered by machine learning. The app leverages a Hugging Face model to process user input and suggest optimized recipes in real-time.
