@@ -1,9 +1,12 @@
+import { useState } from "react"
+
 export default function IngredientsList(props) {
+    
 
     const ingredientListItems = props.ingredients.map((ingredient, index) => {
         return <div key={`${ingredient} ${index}`} className="list-item">
             <li>{ingredient}</li>
-            <button onClick={() => props.deleteListItem(ingredient)} className="delete-list-item">&#x2715;</button>
+            {props.showButton ? <button onClick={() => props.deleteListItem(ingredient)} className="delete-list-item">&#x2715;</button> : null}
             </div>
     })
 

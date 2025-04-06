@@ -9,6 +9,7 @@ export default function Main() {
     const [ingredients, setIngredients] = useState([]);
     const [recipe, setRecipe] = useState("");
     const recipeSection = useRef(null)
+    const [showButton, setShowButton] = useState(true)
 
     useEffect(() => {
         if (recipe != "" && recipeSection.current != null){
@@ -31,12 +32,14 @@ export default function Main() {
         setIsLoading(true)
         const recipeIdea = await getRecipeFromMistral(ingredients);
         setRecipe(recipeIdea);
+        setShowButton(false)
         setIsLoading(false);
     }
 
     function reset() {
         setIngredients([]);
         setRecipe("");
+        setShowButton(true)
     }
 
     function deleteListItem(ingredient) {
@@ -59,7 +62,7 @@ export default function Main() {
             
             
             {ingredients.length > 0 ? (
-                <IngredientsList ref={recipeSection} isLoading={isLoading} deleteListItem={deleteListItem} ingredients={ingredients} showRecipe={getRecipe} />
+                <IngredientsList ref={recipeSection} showButton={showButton} isLoading={isLoading} deleteListItem={deleteListItem} ingredients={ingredients} showRecipe={getRecipe} />
             ) : null}
 
             {recipe ? <ClaudeRecipe recipe={recipe} /> : null}
