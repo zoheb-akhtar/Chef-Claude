@@ -1,3 +1,6 @@
+
+**Note**: The Hugging Face AI is currently not operational. A new update will be released in 1-2 business weeks.
+
 # Chef Claude
 An AI-driven recipe suggestion web app built with React.js that allows users to input ingredients they have and receive tailored recipe recommendations powered by machine learning. The app leverages a Hugging Face model to process user input and suggest optimized recipes in real-time. <br /> <br />
 Check out Chef Claude [here!](https://chef-claude-zoheb-akhtars-projects.vercel.app/)
